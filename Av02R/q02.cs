@@ -2,12 +2,13 @@ using System;
 
 class Program {
   public static void Main() {
-    Pessoa p1 = new Pessoa("P1", "E1", true);
+    Pessoa p1 = new Pessoa("P1", "E1", false);
     Pessoa p2 = new Pessoa("P2", "E2", false);
-    Pessoa p3 = new Pessoa("P3", "E3", true);
+    Pessoa p3 = new Pessoa("P3", "E3", false);
     //Console.WriteLine(p1);
     //Console.WriteLine(p2);
     //Console.WriteLine(p3);
+    
     Equipe e = new Equipe("Equipe");
     e.Inserir(p1);
     e.Inserir(p2);
@@ -15,6 +16,7 @@ class Program {
     foreach(Pessoa p in e.Listar())
       Console.WriteLine(p);
     Console.WriteLine(e.Lider());  
+    
   }
 }
 
@@ -60,4 +62,5 @@ class Pessoa {
   public override string ToString() {
     return $"{nome} - {email} - {lider}";
   }
+  
 }

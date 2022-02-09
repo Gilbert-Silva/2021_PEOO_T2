@@ -4,7 +4,9 @@ class Program {
   public static void Main() {
     Console.Write("Informe o número de contas: ");
     int n = int.Parse(Console.ReadLine());
+
     Agua[] vetor = new Agua[n];
+
     for (int i = 0; i < n; i++) {
       Console.Write("Informe o mês/ano: ");
       string ma = Console.ReadLine();
@@ -21,6 +23,12 @@ class Program {
       totalc = totalc + a.GetConsumo();
       totalg = totalg + a.GetValor();
     }
+    /*
+    for (int i = 0; i < n; i++) {
+      totalc = totalc + vetor[i].GetConsumo();
+      totalg = totalg + vetor[i].GetValor();
+    }
+    */
     Console.WriteLine($"Consumo total em m3 - {totalc}");
     Console.WriteLine($"Total gasto em R$ - {totalg:0.00}");
   }
